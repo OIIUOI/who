@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import Home
-from .. import ifdog
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', Home.as_view(), name='home'),
+    # path('', Home.as_view(), name='home'),
     path('ifdog/', include('ifdog.urls')),
+    path('', views.Home.as_view(), name = "q1-social"),
 ]

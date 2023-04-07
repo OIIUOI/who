@@ -1,0 +1,43 @@
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  background-color: bisque;
+  width: 480px;
+  padding: 10px;
+}
+
+.radio-set {
+  padding: 30px 7px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+[type="radio"] {
+  vertical-align: middle;
+  appearance: none;
+  border: max(2px, 0.3em) solid gray;
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+}
+
+[type="radio"]:checked {
+  content: "";
+  height: 10px;
+  width: 10px;
+  display: block;
+  background-color: tomato;
+  border: 0.4em solid tomato;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+[type="radio"]:focus-visible {
+  outline-offset: max(2px, 0.5em);
+  outline: max(2px, 0.1em) dotted tomato;
+}
+
+[type="radio"]:hover {
+  /* box-shadow: 0 0 0 max(4px, 0.2em) lightgray; */
+  border: 0.4em solid tomato;
+  cursor: pointer;
+}

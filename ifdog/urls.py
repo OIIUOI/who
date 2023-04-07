@@ -5,8 +5,17 @@ Class-based views
 '''
 from django.urls import path
 from . import views
+
 app_name = 'ifdog'
 
 urlpatterns = [
-    path('question/', ),
+    path('q1/', views.Q1_Social.as_view(), name = "q1-social"),
+    # path('q2_act/', views.Q2_Activity.as_view(), name = "q2-act"),
+    # path('q2_act/', views.Q3_Aggressive.as_view(), name = "q3-agg"),
+    # path('q2_act/', views.Q3_Stamina.as_view(), name = "q3-sta"),
+    # path('q2_act/', views.Q2_Activity.as_view(), name = "q2-act"),
+    # path('q2_act/', views.Q2_Activity.as_view(), name = "q2-act"),
+    # path('q2_act/', views.Q2_Activity.as_view(), name = "q2-act"),
+    # path('q2_act/', views.Q2_Activity.as_view(), name = "q2-act"),
+    # path('q2_act/', views.Q2_Activity.as_view(), name = "q2-act"),
 ]
