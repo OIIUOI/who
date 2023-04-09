@@ -1,43 +1,112 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #566270;
+  background-color: #fffff4;
+}
+
+.foot {
+  height: 4rem;
+}
+
 .container {
   margin-right: auto;
   margin-left: auto;
-  background-color: bisque;
-  width: 480px;
+  max-width: 480px;
   padding: 10px;
 }
 
+.title_set {
+  padding: 0px 15px 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.kind {
+  margin: 0px;
+  font-weight: 900;
+  font-size: 30px;
+}
+
 .radio-set {
-  padding: 30px 7px;
+  padding: 40px 0px 10px 0px;
   display: flex;
   justify-content: space-evenly;
+}
+
+.set {
+  padding: 0px 30px 50px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fom {
+  padding-top: 4em;
+  text-align: center;
+}
+
+.lab {
+  font-weight: 700;
+  font-size: 20px;
 }
 
 [type="radio"] {
   vertical-align: middle;
   appearance: none;
-  border: max(2px, 0.3em) solid gray;
+  border: max(2px, 0.3em) solid #E0E3DA;
   border-radius: 50%;
   width: 2.5em;
   height: 2.5em;
 }
 
 [type="radio"]:checked {
-  content: "";
-  height: 10px;
-  width: 10px;
-  display: block;
-  background-color: tomato;
-  border: 0.4em solid tomato;
-  transform: translate(-50%, -50%) scale(1);
-}
+  height: 2.5em;
+  width: 2.5em;
+  border: 0.4em solid #A593E0;
 
-[type="radio"]:focus-visible {
-  outline-offset: max(2px, 0.5em);
-  outline: max(2px, 0.1em) dotted tomato;
 }
 
 [type="radio"]:hover {
-  /* box-shadow: 0 0 0 max(4px, 0.2em) lightgray; */
-  border: 0.4em solid tomato;
+  border: 0.4em solid #A593E0;
+  background-color: rgba(165, 147, 224, 0.5);
   cursor: pointer;
+  transition-property: all;
+  transition-duration: 0.01s;
+}
+
+
+/* CSS */
+.btn {
+  align-items: center;
+  background-color: #fffff4;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, .2) 0 6px 20px;
+  box-sizing: border-box;
+  color: #566270;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  width: 200px;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s, -webkit-box-shadow .2s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:hover {
+  background-color: #A593E0;
+  color: #fffff4;
+  transition-property: all;
+  transition-duration: 0.2s;
 }

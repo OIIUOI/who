@@ -2,76 +2,92 @@
 {% load static %}
 {% block body %}
 
-<h1>사회성</h1>
-<form>
-  <form action="">
-    <div>
-      <label>새로운 사람을 만나는 게 좋다</label>
-      <div class="radio-set">
-        <div class="radio">
-          <input type="radio" name="q1" value="-2">
-        </div>
-        <div class="radio">
-          <input type="radio" name="q1" value="-1">
-        </div>
-        <div class="radio">
-          <input type="radio" name="q1" value="0">
-        </div>
-        <div class="radio">
-          <input type="radio" name="q1" value="1">
-        </div>
-        <div class="radio">
-          <input type="radio" name="q1" value="2">
-        </div>
-      </div>
+<div class="title_set">
+  <img src="https://dummyimage.com/100x100/A593E0/fff.png&text=Dog+paw" alt="dog paw">
+  <p class="kind">사회성</p>
+</div>
+<hr>
+<!-- <form class="fom">
+  <form action=""> -->
+<div>
+  <label class="lab">새로운 사람을 만나는 게 좋다</label>
+  <div class="radio-set">
+    <div class="radio">
+      <input type="radio" name="q1" value="-2">
     </div>
-
-    <div>
-      <label>즐거운 파티와 행사로 피로를 푼다</label>
-      <div class="radio-set">
-        <div class="radio">
-          <input type="radio" name="q2" value="-2">
-        </div>
-        <div class="radio">
-          <input type="radio" name="q2" value="-1">
-        </div>
-        <div class="radio">
-          <input type="radio" name="q2" value="0">
-        </div>
-        <div class="radio">
-          <input type="radio" name="q2" value="1">
-        </div>
-        <div class="radio">
-          <input type="radio" name="q2" value="2">
-        </div>
-      </div>
+    <div class="radio">
+      <input type="radio" name="q1" value="-1">
     </div>
-
-    <div>
-      <label>단체 활동에 참여하는 일을 즐긴다.
-      </label>
-      <div class="radio-set">
-        <div class="radio">
-          <input type="radio" name="q3" value="-2">
-        </div>
-        <div class="radio">
-          <input type="radio" name="q3" value="-1">
-        </div>
-        <div class="radio">
-          <input type="radio" name="q3" value="0">
-        </div>
-        <div class="radio">
-          <input type="radio" name="q3" value="1">
-        </div>
-        <div class="radio">
-          <input type="radio" name="q3" value="2">
-        </div>
-      </div>
+    <div class="radio">
+      <input type="radio" name="q1" value="0">
     </div>
-    <div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="radio">
+      <input type="radio" name="q1" value="1">
     </div>
+    <div class="radio">
+      <input type="radio" name="q1" value="2">
+    </div>
+  </div>
+  <div class="set">
+    <p>전혀 아니다</p>
+    <p>매우 그렇다</p>
+  </div>
+</div>
 
-  </form>
+<div>
+  <label class="lab">즐거운 파티와 행사로 피로를 푼다</label>
+  <div class="radio-set">
+    <div class="radio">
+      <input type="radio" name="q2" value="-2">
+    </div>
+    <div class="radio">
+      <input type="radio" name="q2" value="-1">
+    </div>
+    <div class="radio">
+      <input type="radio" name="q2" value="0">
+    </div>
+    <div class="radio">
+      <input type="radio" name="q2" value="1">
+    </div>
+    <div class="radio">
+      <input type="radio" name="q2" value="2">
+    </div>
+  </div>
+  <div class="set">
+    <p>전혀 아니다</p>
+    <p>매우 그렇다</p>
+  </div>
+</div>
 
-  {% endblock body %}
+<div>
+  <label class="lab">단체 활동에 참여하는 일을 즐긴다.
+  </label>
+  <div class="radio-set">
+    <div class="radio">
+      <input type="radio" name="q3" value="-2">
+    </div>
+    <div class="radio">
+      <input type="radio" name="q3" value="-1">
+    </div>
+    <div class="radio">
+      <input type="radio" name="q3" value="0">
+    </div>
+    <div class="radio">
+      <input type="radio" name="q3" value="1">
+    </div>
+    <div class="radio">
+      <input type="radio" name="q3" value="2">
+    </div>
+  </div>
+  <div class="set">
+    <p>전혀 아니다</p>
+    <p>매우 그렇다</p>
+  </div>
+</div>
+<div>
+  <button class="btn" onclick="get()">Next</button>
+</div>
+<!-- type="submit" -->
+<!-- </form> -->
+<script src="{% static 'js/q1.js' %}"></script>
+{% endblock body %}
