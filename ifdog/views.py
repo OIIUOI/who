@@ -7,26 +7,34 @@ from django.http import JsonResponse
 
 class Q1_Social(TemplateView):
     template_name = "question/q1.html"
-    
-    def post(self, request):
-        score = request.POST.get("score")
-        if score == "up":
-            return redirect('ifdog:q2-royal')
-        elif score == "middle":
-            return redirect('ifdog:q2-strength')
-        else:
-            return redirect('ifdog:q2-activity')
-        
-# class Q2_Activity(View):
-#     def get(self, request):
-#         return render(request, 'q2-act')
 
-#     def post(self, request):
-#         score = request.POST.get("score")
-#         if score == "calm":
-#             return redirect('ifdog:q3-agg')
-#         else:
-#             return redirect('ifdog:q3-sta')
+    def post(self, request):
+        q1, q2, q3 = request.POST.get("q1")
+        print(q1)
+        
+        if q1 == "-2":
+            return redirect('ifdog:q2-act')
+        # elif score == "mid":
+        #     return redirect('ifdog:q2-strength')
+        # else:
+        #     return redirect('ifdog:q2-activity')
+        return redirect('ifdog:q2-at')
+
+def test(request):
+    if request.method == "POST":
+        print(request.POST)
+        return redirect('ifdog:q2-act')
+    return render(request, 'question/q1.html')
+        
+class Q2_Activity(TemplateView):
+    template_name = "question/q2.html"
+
+    # def post(self, request):
+    #     score = request.POST.get("score")
+    #     if score == "calm":
+    #         return redirect('ifdog:q3-agg')
+    #     else:
+    #         return redirect('ifdog:q3-sta')
         
 # class Q3_Aggressive(View):
 #     def get(self, request):

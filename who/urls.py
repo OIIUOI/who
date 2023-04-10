@@ -21,5 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', Home.as_view(), name='home'),
     path('ifdog/', include('ifdog.urls')),
-    path('', views.Home.as_view(), name = "q1-social"),
+    path('', views.Home.as_view(), name = "home"),
 ]
