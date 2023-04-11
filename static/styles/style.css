@@ -5,7 +5,7 @@ body {
 }
 
 .foot {
-  height: 4rem;
+  height: 13rem;
 }
 
 .container {
@@ -35,9 +35,15 @@ body {
 }
 
 .set {
-  padding: 0px 30px 50px 30px;
+  padding: 0px 55px 50px 46px;
   display: flex;
   justify-content: space-between;
+}
+
+.aa {
+  font-size: 14px;
+  font-weight: 900;
+  color: #A593E0;
 }
 
 .fom {
@@ -109,4 +115,37 @@ body {
   color: #fffff4;
   transition-property: all;
   transition-duration: 0.2s;
+}
+
+/* -----------result------------ */
+
+.sort {
+  text-align: right;
+  margin: 0px;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.dog {
+  width: 80%;
+}
+
+.title {
+  text-align: center;
+  font-weight: 900;
+  font-size: 26px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.center {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5rem;
+}
+
+.share {
+  background-color: #A593E0;
+  height: 2rem;
+  width: 45%;
 }

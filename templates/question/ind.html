@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<div class="title_set">
+  <img src="https://dummyimage.com/100x100/A593E0/fff.png&text=Dog+paw" alt="dog paw">
+  <p class="kind">독립성</p>
+</div>
+<hr>
+<form class="fom" method="POST">
+  {% csrf_token %}
+  <div>
+    <label class="lab">다른 사람들과 같이 있는 것이나, 같이 활동하는 것이 안정감을 준다</label>
+    <div class="radio-set">
+      <div class="radio">
+        <input type="radio" name="q1" value="2">
+      </div>
+      <div class="radio">
+        <input type="radio" name="q1" value="1">
+      </div>
+      <div class="radio">
+        <input type="radio" name="q1" value="0">
+      </div>
+      <div class="radio">
+        <input type="radio" name="q1" value="-1">
+      </div>
+      <div class="radio">
+        <input type="radio" name="q1" value="-2">
+      </div>
+    </div>
+    <div class="set">
+      <p class="aa">비동의</p>
+      <p class="aa">동의</p>
+    </div>
+  </div>
+
+  <div>
+    <label class="lab">타인의 인정을 받지 못할까봐 의견표현을 하지 않을 때가 많다</label>
+    <div class="radio-set">
+      <div class="radio">
+        <input type="radio" name="q2" value="2">
+      </div>
+      <div class="radio">
+        <input type="radio" name="q2" value="1">
+      </div>
+      <div class="radio">
+        <input type="radio" name="q2" value="0">
+      </div>
+      <div class="radio">
+        <input type="radio" name="q2" value="-1">
+      </div>
+      <div class="radio">
+        <input type="radio" name="q2" value="-2">
+      </div>
+    </div>
+    <div class="set">
+      <p class="aa">비동의</p>
+      <p class="aa">동의</p>
+    </div>
+  </div>
+
+  <div>
+    <label class="lab">나의 결정을 믿고 그에 따른 책임을 진다
+    </label>
+    <div class="radio-set">
+      <div class="radio">
+        <input type="radio" name="q3" value="-2">
+      </div>
+      <div class="radio">
+        <input type="radio" name="q3" value="-1">
+      </div>
+      <div class="radio">
+        <input type="radio" name="q3" value="0">
+      </div>
+      <div class="radio">
+        <input type="radio" name="q3" value="1">
+      </div>
+      <div class="radio">
+        <input type="radio" name="q3" value="2">
+      </div>
+    </div>
+    <div class="set">
+      <p class="aa">비동의</p>
+      <p class="aa">동의</p>
+    </div>
+  </div>
+  <div>
+    <button class="btn">Next</button>
+  </div>
+
+</form>
+<!-- <script src="{% static 'js/q1.js' %}"></script> -->
+{% endblock body %}
