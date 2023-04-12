@@ -132,12 +132,22 @@ class Q3_Independence(TemplateView):
             request.POST.get("q1"), request.POST.get("q2"), request.POST.get("q3")
             ])
         score = q1 + q2 + q3
-        if score <= 0:
-            return redirect('r-yorkshire')
-        else:
-            return redirect('r-pomeranian')
+        ### cookie
+        return redirect
         
+class Q4_Learn(TemplateView):
+    template_name = "question/learn.html"
 
+    def post(self, request):
+        [q1, q2, q3] = map(int, [
+            request.POST.get("q1"), request.POST.get("q2"), request.POST.get("q3")
+            ])
+        score = q1 + q2 + q3
+
+        if score <= 0:
+            return redirect('r-husky')
+        else:
+            return redirect('r-corgi')
 
         
 ################## RESULT #####################
