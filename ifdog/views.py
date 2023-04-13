@@ -15,7 +15,7 @@ class Q1_Social(TemplateView):
         if score < -1:
             return redirect('ifdog:q2-act')
         elif score < 1:
-            return redirect('ifdog:q2-strength')
+            return redirect('ifdog:q2-stam')
         else:
             return redirect('ifdog:q2-activity')
         
@@ -126,16 +126,18 @@ class Q3_Agg(TemplateView):
 
 class Q3_Independence(TemplateView):
     template_name = "question/ind.html"
-
+    
     def post(self, request):
         [q1, q2, q3] = map(int, [
             request.POST.get("q1"), request.POST.get("q2"), request.POST.get("q3")
             ])
         score = q1 + q2 + q3
         ### cookie
-        return redirect
+        response = redirect('ifdog/q4-lea')
+        response.set_cookie("score", score)
+        return response
         
-class Q4_Learn(TemplateView):
+class Q4_Learn2(TemplateView):
     template_name = "question/learn.html"
 
     def post(self, request):
@@ -143,11 +145,13 @@ class Q4_Learn(TemplateView):
             request.POST.get("q1"), request.POST.get("q2"), request.POST.get("q3")
             ])
         score = q1 + q2 + q3
-
-        if score <= 0:
-            return redirect('r-husky')
-        else:
-            return redirect('r-corgi')
+        ind_score = request.COOKIES['score']
+        
+        if ind_score < 0: # if dependent
+            if score < 0:
+                return redirect('r-maltese')
+            else:
+                return redirect('r-dachshund')
 
         
 ################## RESULT #####################

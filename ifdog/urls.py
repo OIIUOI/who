@@ -14,12 +14,12 @@ urlpatterns = [
     path('q3_agg/', views.Q3_Aggressive.as_view(), name = "q3-agg"),
     path('q3_stam/', views.Q3_Stamina.as_view(), name = "q3-stam"),
     path('q4_act/', views.Q4_Independence.as_view(), name = "q4-ind"),
-    path('q4_act/', views.Q4_Learn.as_view(), name = "q4-learn"),
+    path('q4_learn/', views.Q4_Learn.as_view(), name = "q4-learn"),
 
     path('q2_stam/', views.Q2_Stamina.as_view(), name = "q2-stam"),
     path('q3_ag/', views.Q3_Agg.as_view(), name = "q3-ag"),
-    path('q3_ind/', views.Q3_Agg.as_view(), name = "q3-ind"),
-    
+    path('q3_ind/', views.Q3_Independence.as_view(), name = "q3-ind"),
+    path('q4_learn2/', views.Q4_Learn2.as_view(), name = "q4-lea"),
     
     ################## result ####################
     path('r-grayhound/', views.R_Grayhound.as_view(), name = "r-gray"),
