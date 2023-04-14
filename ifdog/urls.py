@@ -21,6 +21,8 @@ urlpatterns = [
     path('q3_ind/', views.Q3_Independence.as_view(), name = "q3-ind"),
     path('q4_learn2/', views.Q4_Learn2.as_view(), name = "q4-lea"),
     
+    path('q3-insist/', views.Q3_Insist.as_view(), name='q3-ins'),
+    path('q4-agg/', views.Q4_Aggressive.as_view(), name="q4-agg")
     ################## result ####################
     path('r-grayhound/', views.R_Grayhound.as_view(), name = "r-gray"),
     path('r-sivaInu/', views.R_SivaInu.as_view(), name = "r-siva"),

@@ -10,22 +10,22 @@
 <form class="fom" method="POST">
   {% csrf_token %}
   <div>
-    <label class="lab">정적인 운동이 잘 맞는다</label>
+    <label class="lab">내 말이 맞다고 생각하면 다른 사람의 비판에도 의견을 굽히지 않는다</label>
     <div class="radio-set">
       <div class="radio">
-        <input type="radio" name="q1" value="2">
-      </div>
-      <div class="radio">
-        <input type="radio" name="q1" value="1">
-      </div>
-      <div class="radio">
-        <input type="radio" name="q1" value="0">
+        <input type="radio" name="q1" value="-2">
       </div>
       <div class="radio">
         <input type="radio" name="q1" value="-1">
       </div>
       <div class="radio">
-        <input type="radio" name="q1" value="-2">
+        <input type="radio" name="q1" value="0">
+      </div>
+      <div class="radio">
+        <input type="radio" name="q1" value="1">
+      </div>
+      <div class="radio">
+        <input type="radio" name="q1" value="2">
       </div>
     </div>
     <div class="set">
@@ -35,7 +35,7 @@
   </div>
 
   <div>
-    <label class="lab">나는 내 생각을 많이 표현한다</label>
+    <label class="lab">어려움을 만나더라도, 자신의 목표를 달성하기 위해 끈기있게 노력한다</label>
     <div class="radio-set">
       <div class="radio">
         <input type="radio" name="q2" value="-2">
@@ -60,7 +60,7 @@
   </div>
 
   <div>
-    <label class="lab">나는 움직이면서 생각을 정리한다
+    <label class="lab">고집 때문에 다른 사람들과의 관계에서 충돌을 일으킬 때가 종종 있다
     </label>
     <div class="radio-set">
       <div class="radio">

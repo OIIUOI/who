@@ -74,9 +74,9 @@ class Q4_Independence(TemplateView):
             ])
         score = q1 + q2 + q3
         if score <= 0:
-            return redirect('r-yorkshire')
+            return redirect('ifdog:r-yorkshire')
         else:
-            return redirect('r-pomeranian')
+            return redirect('ifdog:r-pomeranian')
             
             
         
@@ -90,9 +90,9 @@ class Q4_Learn(TemplateView):
         score = q1 + q2 + q3
 
         if score <= 0:
-            return redirect('r-husky')
+            return redirect('ifdog:r-husky')
         else:
-            return redirect('r-corgi')
+            return redirect('ifdog:r-corgi')
             
 class Q2_Stamina(TemplateView):
     template_name = "question/stem.html"
@@ -148,12 +148,57 @@ class Q4_Learn2(TemplateView):
         ind_score = request.COOKIES['score']
         
         if ind_score < 0: # if dependent
-            if score < 0:
-                return redirect('r-maltese')
+            if score < -2:
+                return redirect('ifdog:r-maltese')
             else:
                 return redirect('r-dachshund')
-
+        else:
+            if score < 0:
+                return redirect('r-spitz')
+            else:
+                return redirect('r-papillon')
         
+class Q3_Insist(TemplateView):
+    template_name = 'question/insist.html'
+
+    def post(self, request):
+        [q1, q2, q3] = map(int, [
+            request.POST.get("q1"), request.POST.get("q2"), request.POST.get("q3")
+            ])
+        score = q1 + q2 + q3
+
+        if score < 0:
+            return redirect('ifdog:q4-act')
+        else:
+            return redirect('ifdog:q4-agg')
+        
+class Q4_Activity(TemplateView):
+    template_name="question/act.html"
+
+    def post(self, request):
+        [q1, q2, q3] = map(int, [
+            request.POST.get("q1"), request.POST.get("q2"), request.POST.get("q3")
+            ])
+        score = q1 + q2 + q3
+
+        if score < 0:
+            return redirect('ifdog:r-shetlandSheepdog')
+        else:
+            return redirect('ifdog:r-borderCollie')
+
+class Q4_Aggressive(TemplateView):
+    template_name="question/agg.html"
+
+    def post(self, request):
+        [q1, q2, q3] = map(int, [
+            request.POST.get("q1"), request.POST.get("q2"), request.POST.get("q3")
+            ])
+        score = q1 + q2 + q3
+
+        if score < 0:
+            return redirect('ifdog:r-samoyed')
+        else:
+            return redirect('ifdog:r-Schnauzer')
 ################## RESULT #####################
 
 class R_Grayhound(TemplateView):
