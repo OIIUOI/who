@@ -43,11 +43,11 @@ class Q3_Aggressive(TemplateView):
         score = q1 + q2 + q3
         
         if score < -1:
-            return redirect('ifdog:r-grayhound')
+            return redirect('ifdog:r-gray')
         elif score < 1:
             return redirect('ifdog:r-siva')
         else:
-            return redirect('ifdog:r-zindo')
+            return redirect('ifdog:r-jindo')
         
 class Q3_Stamina(TemplateView):
     template_name = "question/stem.html"
@@ -61,7 +61,7 @@ class Q3_Stamina(TemplateView):
         if score < -1:
             return redirect('ifdog:ind')
         elif score < 1:
-            return redirect('ifdog:r-bed')
+            return redirect('ifdog:r-bedling')
         else:
             return redirect('ifdog:q4-learn')
 
@@ -76,7 +76,7 @@ class Q4_Independence(TemplateView):
         if score <= 0:
             return redirect('ifdog:r-yorkshire')
         else:
-            return redirect('ifdog:r-pomeranian')
+            return redirect('ifdog:r-pome')
             
             
         
@@ -120,7 +120,7 @@ class Q3_Agg(TemplateView):
         score = q1 + q2 + q3
         
         if score < 1:
-            return redirect('ifdog:r-shihtzu')
+            return redirect('ifdog:r-shihTzu')
         else:
             return redirect('ifdog:r-chihuahua')
 
@@ -151,12 +151,12 @@ class Q4_Learn2(TemplateView):
             if score < -2:
                 return redirect('ifdog:r-maltese')
             else:
-                return redirect('r-dachshund')
+                return redirect('ifdog:r-dachshund')
         else:
             if score < 0:
-                return redirect('r-spitz')
+                return redirect('ifdog:r-spitz')
             else:
-                return redirect('r-papillon')
+                return redirect('ifdog:r-papillon')
         
 class Q3_Insist(TemplateView):
     template_name = 'question/insist.html'
@@ -182,9 +182,9 @@ class Q4_Activity(TemplateView):
         score = q1 + q2 + q3
 
         if score < 0:
-            return redirect('ifdog:r-shetlandSheepdog')
+            return redirect('ifdog:r-sheepdog')
         else:
-            return redirect('ifdog:r-borderCollie')
+            return redirect('ifdog:r-collie')
 
 class Q4_Aggressive(TemplateView):
     template_name = "question/agg.html"
@@ -198,7 +198,7 @@ class Q4_Aggressive(TemplateView):
         if score < 0:
             return redirect('ifdog:r-samoyed')
         else:
-            return redirect('ifdog:r-Schnauzer')
+            return redirect('ifdog:r-schnauzer')
         
 class Q2_loyalty(TemplateView):
     template_name = "question/loyal.html"
@@ -230,12 +230,12 @@ class Q3_Independence2(TemplateView):
             if score <= 0:
                 return redirect('ifdog:r-beagle')
             else:
-                return redirect('ifdog:r-goldenRetriever')
+                return redirect('ifdog:r-golden')
         else:
             if score <= 0:
                 return redirect('ifdog:q4-act')
             else:
-                return redirect('ifdog:r-bichonFrise')
+                return redirect('ifdog:r-bichon')
             
 class Q4_Activity(TemplateView):
     template_name = "question/act.html"
@@ -247,7 +247,7 @@ class Q4_Activity(TemplateView):
         score = q1 + q2 + q3
 
         if score <= 0:
-            return redirect('ifdog:r-cavalierKingCharlesSpaniel')
+            return redirect('ifdog:r-bichon')
         else:
             return redirect('ifdog:r-poodle')
 
@@ -277,15 +277,14 @@ class Q4_Agg(TemplateView):
         score = q1 + q2 + q3
         
         if score < 1:
-            return redirect('ifdog:r-labradorRetriever')
+            return redirect('ifdog:r-labrador')
         else:
-            return redirect('ifdog:r-dobermannPinsher')
+            return redirect('ifdog:r-dobermann')
 
 ################## RESULT #####################
 
 class R_Grayhound(TemplateView):
     template_name = "result/r-grayhound.html"
-
 
 class R_SivaInu(TemplateView):
     template_name = "result/r-sivainu.html"
@@ -293,5 +292,77 @@ class R_SivaInu(TemplateView):
 class R_Jindo(TemplateView):
     template_name = "result/r-jindo.html"
 
+class R_Yorkshire(TemplateView):
+    template_name = "result/r-yorkshire.html"
+
+class R_Pomeranian(TemplateView):
+    template_name = "result/r-pomeranian.html"
+
 class R_Bedlington(TemplateView):
-    template_name = "result/r-bed.html"
+    template_name = "result/r-bedling.html"
+
+class R_SiberianHusky(TemplateView):
+    template_name = "result/r-husky.html"
+
+class R_WelshCorgi(TemplateView):
+    template_name = "result/r-corgi.html"
+
+class R_ShihTzu(TemplateView):
+    template_name = "result/r-shihTzu.html"
+
+class R_Chihuahua(TemplateView):
+    template_name = "result/r-chihuahua.html"
+
+class R_Spitz(TemplateView):
+    template_name = "result/r-spitz.html"
+
+class R_Papillon(TemplateView):
+    template_name = "result/r-papillon.html"
+
+class R_Maltese(TemplateView):
+    template_name = "result/r-maltese.html"
+
+class R_Papillon(TemplateView):
+    template_name = "result/r-papillon.html"
+
+class R_Dachshund(TemplateView):
+    template_name = "result/r-dachshund.html"
+
+class R_Sheepdog(TemplateView):
+    template_name = "result/r-sheepdog.html"
+
+class R_BorderCollie(TemplateView):
+    template_name = "result/r-collie.html"
+
+class R_Samoyed(TemplateView):
+    template_name = "result/r-samoyed.html"
+
+class R_Schnauzer(TemplateView):
+    template_name = "result/r-schnauzer.html"
+
+class R_Beagle(TemplateView):
+    template_name = "result/r-beagle.html"
+
+class R_GoldenRetriever(TemplateView):
+    template_name = "result/r-golden.html"
+
+class R_Poodle(TemplateView):
+    template_name = "result/r-poodle.html"
+
+class R_Cavalier(TemplateView):
+    template_name = "result/r-cavalier.html"
+
+class R_Bichon(TemplateView):
+    template_name = "result/r-bichon.html"
+
+class R_Pug(TemplateView):
+    template_name = "result/r-pug.html"
+
+class R_CockerSpaniel(TemplateView):
+    template_name = "result/r-cockerSpaniel.html"
+
+class R_LabradorRetriever(TemplateView):
+    template_name = "result/r-labradorRetriever.html"
+
+class R_Dobermann(TemplateView):
+    template_name = "result/r-dobermann.html"

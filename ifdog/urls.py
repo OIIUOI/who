@@ -29,19 +29,34 @@ urlpatterns = [
     path('q4_act/', views.Q4_Activity.as_view(), name='q4-act'),
     path('q3_learn/', views.Q3_Learn.as_view(), name="q3-learn"),
     path('q4_ag/', views.Q4_Agg.as_view(), name="q4-ag"),
+
     ################## result ####################
     path('r-grayhound/', views.R_Grayhound.as_view(), name = "r-gray"),
     path('r-sivaInu/', views.R_SivaInu.as_view(), name = "r-siva"),
     path('r-jindo/', views.R_Jindo.as_view(), name = "r-jindo"),
-    
+    path('r-yorkshire/', views.R_Yorkshire.as_view(), name = "r-yorkshire"),
+    path('r-pome/', views.R_Pomeranian.as_view(), name = "r-pome"),
+    path('r-bedling/', views.R_Bedlington.as_view(), name = "r-bedling"),
+    path('r-siberian/', views.R_SiberianHusky.as_view(), name = "r-husky"),
+    path('r-corgi/', views.R_WelshCorgi.as_view(), name = "r-corgi"),
+    path('r-shihTzu/', views.R_ShihTzu.as_view(), name = "r-shihTzu"),
+    path('r-chihuahua/', views.R_Chihuahua.as_view(), name = "r-chihuahua"),
+    path('r-spitz/', views.R_Spitz.as_view(), name = "r-spitz"),
+    path('r-papillon/', views.R_Papillon.as_view(), name = "r-papillon"),
+    path('r-maltese/', views.R_Maltese.as_view(), name = "r-maltese"),
+    path('r-papillon/', views.R_Papillon.as_view(), name = "r-papillon"),
+    path('r-dachshund/', views.R_Dachshund.as_view(), name = "r-dachshund"),
+    path('r-sheepdog/', views.R_Sheepdog.as_view(), name = "r-sheepdog"),
+    path('r-collie/', views.R_BorderCollie.as_view(), name = "r-collie"),
+    path('r-samoyed/', views.R_Samoyed.as_view(), name = "r-samoyed"),
+    path('r-schnauzer/', views.R_Schnauzer.as_view(), name = "r-schnauzer"),
+    path('r-beagle/', views.R_Beagle.as_view(), name = "r-beagle"),
+    path('r-golden/', views.R_GoldenRetriever.as_view(), name = "r-golden"),
+    path('r-poodle/', views.R_Poodle.as_view(), name = "r-poodle"),
+    path('r-cavalier/', views.R_Cavalier.as_view(), name = "r-cavalier"),
+    path('r-bichon/', views.R_Bichon.as_view(), name = "r-bichon"),
+    path('r-pug/', views.R_Pug.as_view(), name = "r-pug"),
+    path('r-cockerSpaniel/', views.R_CockerSpaniel.as_view(), name = "r-cockerSpaniel"),
+    path('r-labradorRetriever/', views.R_LabradorRetriever.as_view(), name = "r-labrador"),
+    path('r-dobermann/', views.R_Dobermann.as_view(), name = "r-dobermann"),
 ]
-
-''' 
-r-shihtzu
-r-chihuahua
-r-husky
-r-corgi
-r-pomeranian
-r-yorkshire
-r-Bedlington_Terrier
-'''
