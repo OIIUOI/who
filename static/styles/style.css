@@ -116,36 +116,3 @@ body {
   transition-property: all;
   transition-duration: 0.2s;
 }
-
-/* -----------result------------ */
-
-.sort {
-  text-align: right;
-  margin: 0px;
-  font-weight: 900;
-  font-size: 20px;
-}
-
-.dog {
-  width: 80%;
-}
-
-.title {
-  text-align: center;
-  font-weight: 900;
-  font-size: 26px;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
-.center {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 5rem;
-}
-
-.share {
-  background-color: #A593E0;
-  height: 2rem;
-  width: 45%;
-}

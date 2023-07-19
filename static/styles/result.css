@@ -1,0 +1,35 @@
+.sort {
+    text-align: right;
+    margin: 0px;
+    font-weight: 900;
+    font-size: 20px;
+  }
+  
+  .dog {
+    width: 80%;
+  }
+  
+  .title {
+    text-align: center;
+    font-weight: 900;
+    font-size: 26px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+.center {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5rem;
+  }
+
+.article {
+    font-size: 15px;
+  }
+
+.share {
+    background-color: #fffff4;
+    height: 2rem;
+    width: 45%;
+}
+/* #A593E0; */

@@ -18,13 +18,13 @@ urlpatterns = [
 
     path('q2_stam/', views.Q2_Stamina.as_view(), name = "q2-stam"),
     path('q3_ag/', views.Q3_Agg.as_view(), name = "q3-ag"),
-    path('q3_ind/', views.Q3_Independence.as_view(), name = "q3-ind"),
+    path('q3_ind/', views.Q3_Independence.as_view(), name = "q4-ind"),
     path('q4_learn2/', views.Q4_Learn2.as_view(), name = "q4-lea"),
     
     path('q3_insist/', views.Q3_Insist.as_view(), name='q3-ins'),
     path('q4_agg/', views.Q4_Aggressive.as_view(), name="q4-agg"),
 
-    path('q2_loyalty/', views.Q3_loyalty.as_view(), name="q2-loy"),
+    path('q2_loyalty/', views.Q2_loyalty.as_view(), name="q2-loy"),
     path('q3_indep/', views.Q3_Independence2.as_view(), name="q3-indep"),
     path('q4_act/', views.Q4_Activity.as_view(), name='q4-act'),
     path('q3_learn/', views.Q3_Learn.as_view(), name="q3-learn"),
@@ -34,7 +34,7 @@ urlpatterns = [
     path('r-grayhound/', views.R_Grayhound.as_view(), name = "r-gray"),
     path('r-sivaInu/', views.R_SivaInu.as_view(), name = "r-siva"),
     path('r-jindo/', views.R_Jindo.as_view(), name = "r-jindo"),
-    path('r-yorkshire/', views.R_Yorkshire.as_view(), name = "r-yorkshire"),
+    path('r-yorkshire/', views.R_Yorkshire.as_view(), name = "r-york"),
     path('r-pome/', views.R_Pomeranian.as_view(), name = "r-pome"),
     path('r-bedling/', views.R_Bedlington.as_view(), name = "r-bedling"),
     path('r-siberian/', views.R_SiberianHusky.as_view(), name = "r-husky"),

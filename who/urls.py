@@ -19,7 +19,6 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('', Home.as_view(), name='home'),
-    path('ifdog/', include('ifdog.urls')),
+    path('ifdog/', include('dog.urls')),
     path('', views.Home.as_view(), name = "home"),
 ]

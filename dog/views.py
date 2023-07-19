@@ -59,7 +59,7 @@ class Q3_Stamina(TemplateView):
         score = q1 + q2 + q3
         
         if score < -1:
-            return redirect('ifdog:ind')
+            return redirect('ifdog:q4-ind')
         elif score < 1:
             return redirect('ifdog:r-bedling')
         else:
@@ -74,7 +74,7 @@ class Q4_Independence(TemplateView):
             ])
         score = q1 + q2 + q3
         if score <= 0:
-            return redirect('ifdog:r-yorkshire')
+            return redirect('ifdog:r-york')
         else:
             return redirect('ifdog:r-pome')
             
