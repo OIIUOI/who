@@ -24,9 +24,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-g4efb$qd%&3z(vm!s9^_4xn=+c0+#)pn3%j)l$@v6*azibhceg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "ifdog.site",
+    "*.ap-northeast-2.compute.amazonaws.com",
+    "127.0.0.1",
+    "localhost",
+]
 
 
 # Application definition
