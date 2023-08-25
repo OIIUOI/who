@@ -72,6 +72,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'who.wsgi.application'
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'HTTPS')
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
